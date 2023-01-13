@@ -1,7 +1,27 @@
 import random
 
 
-Planet_name = ["Bacu", "Ulu", "Html", "Ga", "Dagu", "kua"]
+Planet_name = ["Bacu", "Ulu", "Html", "Ga",
+               "Dagu", "kua", "los", "pollos", "hermanos"]
+
+inventory = ["wrench"]
+
+
+def print_inventory():
+    print("Inventory:")
+    for item in inventory:
+        print("- " + item)
+
+
+common_items = ["combat knife", "9mm revolver"]
+
+rare_items = ["blaster", "a fucking pencil"]
+
+epic_items = ["Plasma Thrower", "pulse rifle"]
+
+legendary_item = ["comically small revolver", "BFG 9000"]
+
+Mythical_item = ["comically large spoon"]
 
 # Events for planet one
 
@@ -44,8 +64,42 @@ def Planet1_event1():
         else:
             print("you shoot the control panel causing it to explode in you face.")
 
+# Loot generator
 
-# def två():
+
+def Loot_event():
+    print("you do be landing tho and locate chest")
+    item_chance = random.randint(1, 100)
+
+    if item_chance <= 40:
+        item_chance = random.randint(1, 2)
+        if item_chance <= 1:
+            print("You have found a combat knife (Common) in the chest, congrats.")
+        else:
+            print("You have found a 9mm revolver (Common), please use with care.")
+    elif item_chance <= 60:
+        item_chance = random.randint(1, 2)
+        if item_chance <= 1:
+            print("You have located a blaster (Rare).")
+        else:
+            print("You have aqquired a fucking pencil (Rare). ")
+
+    elif item_chance <= 75:
+        item_chance = random.randint(1, 2)
+        if item_chance <= 1:
+            print("You have located a plasma thrower (Epic). ")
+        else:
+            print("You have found a pulse rifle (thats Epic). ")
+    elif item_chance <= 90:
+        item_chance = random.randint(1, 2)
+        if item_chance <= 1:
+            print("You have located a comically smal revolver (Legendary).")
+        else:
+            print("You have found a BFG 9000 (Legen wait for it... dary). ")
+    elif item_chance <= 100:
+        print("You scoop out a comically large spoon (Mythical).")
+
+# def planet1 event2():
 #     plan = input(
 #         "As you are decending towards sed planetuas the ship is hot. \n What is your plan of action? \n[1] Eavasiv Manuvers \n[2] Override the engine \n[3] Shoot the control panel")
 #     if plan == "1":
