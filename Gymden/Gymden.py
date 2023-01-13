@@ -182,3 +182,5 @@ while health >= 0:
             print("icke")
         else:
             print("TRY AGAIN")
+
+print("u mom")
