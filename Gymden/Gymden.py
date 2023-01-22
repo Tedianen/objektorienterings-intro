@@ -50,6 +50,9 @@ Mythical_item = ["comically large spoon"]
 
 # Event 1
 
+print("artin")
+
+
 def Planet1_event1():
     plan = typingInput(
         "As you are decending towards sed planetuas the ship is hot. \n What is your plan of action? \n[1] Eavasiv Manuvers \n[2] Override the engine \n[3] Shoot the control panel")
